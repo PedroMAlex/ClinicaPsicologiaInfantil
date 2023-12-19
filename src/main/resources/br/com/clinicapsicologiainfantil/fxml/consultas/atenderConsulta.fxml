@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.clinicapsicologiainfantil.view.consultas.AtenderConsultaView">
+    <center>
+        <GridPane hgap="10" vgap="10" BorderPane.alignment="CENTER">
+            <Label prefWidth="100.0" text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="idTextField" editable="false" maxWidth="50.0" minWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label prefWidth="100.0" text="Médico:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="medicoTextField" editable="false" prefWidth="665.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label prefWidth="60.0" text="Paciente:" GridPane.rowIndex="2">
+            <TextField fx:id="pacienteTextField" maxWidth="630.0" minWidth="630.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label prefWidth="100.0" text="Devolutiva:" GridPane.rowIndex="4" />
+            <TextArea fx:id="devolutivaTextArea" prefHeight="665.0" prefWidth="665.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+              <ImageView GridPane.columnIndex="2" GridPane.rowIndex="2">
+                <Image url="/br/com/clinicapsicologiainfantil/images/ico_lupa.png" />
+             </ImageView>
+        </GridPane>
+    </center>
+    <bottom>
+        <ButtonBar prefHeight="32.0" prefWidth="785.0" BorderPane.alignment="CENTER">
+            <buttons>
+                <Button defaultButton="true" onAction="#salvarAtendimentoConsulta" text="Salvar">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                    <graphic>
+                        <ImageView><Image url="/br/com/clinicapsicologiainfantil/images/ico_ok.png" /></ImageView>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#fecharAtenderConsulta" text="Fechar">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                    <graphic>
+                        <ImageView><Image url="/br/com/clinicapsicologiainfantil/images/ico_cancel.png" /></ImageView>
+                    </graphic>
+                </Button>
+            </buttons>
+        </ButtonBar>
+    </bottom>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</BorderPane>

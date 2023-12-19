@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.clinicapsicologiainfantil.view.especialidades.ListarEspecialidadesView">
+    <center>
+        <TableView fx:id="tableListaEspecialidades" onMouseClicked="#tableViewClicked">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+            <columns>
+                <TableColumn fx:id="colunaId" minWidth="50.0" text="ID"/>
+                <TableColumn fx:id="colunaDescricao" minWidth="680.0" text="Nome da Especialidade"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <ButtonBar prefHeight="40.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+            <buttons>
+                <Button onAction="#novaEspecilidade" defaultButton="true" text="Novo">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                    <graphic>
+                        <ImageView><Image url="/br/com/clinicapsicologiainfantil/images/ico_ok.png"/></ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#fecharListaEspecialidades" mnemonicParsing="false" text="Fechar">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                    <graphic>
+                        <ImageView><Image url="/br/com/clinicapsicologiainfantil/images/ico_cancel.png"/></ImageView>
+                    </graphic>
+                </Button>
+            </buttons>
+        </ButtonBar>
+    </bottom>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</BorderPane>

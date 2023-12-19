@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.clinicapsicologiainfantil.view.MainView">
+    <top>
+        <MenuBar prefHeight="24.0" prefWidth="800.0">
+            <Menu text="Cadastros">
+                <items>
+                    <MenuItem onAction="#mostrarListaPacientes" text="Pacientes" />
+                    <SeparatorMenuItem />
+                    <MenuItem onAction="#mostrarListaMedicos" text="Médicos" />
+                    <MenuItem onAction="#mostrarListaEspecialidades" text="Especilidades" />
+                </items>
+            </Menu>
+            <Menu text="Consultas">
+                <items>
+                    <MenuItem onAction="#mostrarListaConsultas" text="Agendar Consulta" />
+                    <SeparatorMenuItem />
+                    <MenuItem onAction="#atenderConsulta" text="Atender Consulta Agendada" />
+                </items>
+            </Menu>
+            <Menu text="Receitas">
+                <items>
+                    <MenuItem onAction="#mostrarListaReceitas" text="Gerenciar Receitas" />
+                </items>
+            </Menu>
+            <Menu text="Sobre">
+                <items>
+                    <MenuItem onAction="#mostrarSobre" text="Informações sobre a aplicação"/>
+                </items>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <ImageView fitHeight="500.0" fitWidth="800.0" opacity="0.1" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <image><Image url="/br/com/clinicapsicologiainfantil/images/back.png" backgroundLoading="true"/></image>
+        </ImageView>
+    </center>
+    <bottom>
+        <ToolBar prefHeight="30.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+            <items>
+                <Label prefHeight="18.0" prefWidth="250.0" text="Developed by: Pedro Alexandre Melo Dantas" textAlignment="CENTER" />
+                <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="506.0" text="UFRN - Análise e Desenvolvimento de Sistemas" textAlignment="RIGHT" />
+            </items>
+            <opaqueInsets><Insets /></opaqueInsets>
+            <effect><SepiaTone /></effect>
+            <padding><Insets left="20.0" /></padding>
+        </ToolBar>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.clinicapsicologiainfantil.view.receitas.CadastroReceitaView">
+    <center>
+        <GridPane hgap="10" vgap="10">
+            <Label text="ID:" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="idTextField" minWidth="50.0" maxWidth="50.0" GridPane.columnIndex="1" GridPane.rowIndex="0" editable="false"/>
+
+            <Label text="Paciente:" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="pacienteTextField" prefWidth="665.0" GridPane.columnIndex="1" GridPane.rowIndex="1" visible="false" editable="false"/>
+            <ListView fx:id="pacienteListView" maxWidth="300.0" minWidth="300.0" maxHeight="72.0" minHeight="72.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <cursor><Cursor fx:constant="HAND" /></cursor>
+            </ListView>
+
+            <Label text="Médico:" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="medicoTextField" prefWidth="665.0" GridPane.columnIndex="1" GridPane.rowIndex="2" visible="false" editable="false"/>
+            <ListView fx:id="medicoListView" maxWidth="300.0" minWidth="300.0" maxHeight="72.0" minHeight="72.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <cursor><Cursor fx:constant="HAND" /></cursor>
+            </ListView>
+
+            <Label text="Prescrição:" prefWidth="100.0" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextArea fx:id="prescricaoTextArea" prefHeight="665.0" prefWidth="665.0" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        </GridPane>
+    </center>
+    <bottom>
+        <ButtonBar prefHeight="40.0" prefWidth="750.0" BorderPane.alignment="CENTER">
+            <buttons>
+                <Button onAction="#imprimirReceita" fx:id="btnImprimir" mnemonicParsing="false" text="Imprimir">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                    <graphic>
+                        <ImageView><Image url="/br/com/clinicapsicologiainfantil/images/ico_printer.png"/></ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#salvarReceita" defaultButton="true" text="Salvar">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                    <graphic>
+                        <ImageView><Image url="/br/com/clinicapsicologiainfantil/images/ico_ok.png"/></ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#fecharReceita" mnemonicParsing="false" text="Fechar">
+                    <cursor><Cursor fx:constant="HAND" /></cursor>
+                    <graphic>
+                        <ImageView><Image url="/br/com/clinicapsicologiainfantil/images/ico_cancel.png"/></ImageView>
+                    </graphic>
+                </Button>
+            </buttons>
+        </ButtonBar>
+    </bottom>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</BorderPane>
